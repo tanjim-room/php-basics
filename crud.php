@@ -1,9 +1,14 @@
 <?php
-   if(isset($_GET) && $_GET['name'] != ""){
-     echo $_GET['name'];
-     echo "<br>";
-     echo $_GET['email'];
-   }
+//    if(isset($_GET) && $_GET['name'] != ""){
+//      echo $_GET['name'];
+//      echo "<br>";
+//      echo $_GET['email'];
+//    }
+
+    if(isset($_POST['submit'])){
+        echo "<pre>";
+        print_r($_FILES);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +24,7 @@
     </style>
 </head>
 <body>
-   <div>
+   <!-- <div>
      <form action="" method="GET">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" value=""><br><br>
@@ -36,7 +41,15 @@
         <input type="email" name="email" id="email"><br><br>
         <input type="submit" value="Submit">
 
-</form>
+</form> -->
+   <!-- </div> -->
+
+   <div>
+    <form action="" method="POST">
+        <label for="file">File:</label>
+        <input type="file" name="filename"><br><br>
+        <input type="submit" value="submit" name="submit">
+    </form>
    </div>
     
 </body>
